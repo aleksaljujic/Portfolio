@@ -6,7 +6,7 @@ from pathlib import Path
 current_dir = Path(__file__).parent if "__file__" in locals() else Path()
 
 css_file = current_dir / "styles" / "style.css"
-cv_file = current_dir / "assets" / "Aleksa Ljujic CV.pdf"
+cv_file = current_dir / "assets" / "Aleksa Ljujić CV.pdf"
 profile_image = current_dir / "assets" / "Aleksa Ljujic.png"
 
 
@@ -62,14 +62,20 @@ with st.sidebar:
     st.image(profile_image, width=200)
     
     # Navigation menu using a selectbox
-    menu_options = [
-        "About",
-        "Experience",
-        "Relevant Projects",
-        "Student Organizations",
-        "Skills",
-        "Contact"
-    ]
+    # Menu options
+    menu_options = {
+        "About": "About",
+        "Experience": "Experience",
+        "Relevant Projects": "Relevant Projects",
+        "Student Organizations": "Student Organizations",
+        "Skills": "Skills",
+        "Contact": "Contact",
+    }
+
+    for option, section in menu_options.items():
+     btn_col, _ = st.sidebar.columns([3, 1])
+     if btn_col.button(option, key=section, use_container_width=True):
+         st.session_state.menu = section
     
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -153,6 +159,7 @@ elif st.session_state.menu == "Relevant Projects":
 
 # Student Organizations Section
 elif st.session_state.menu == "Student Organizations":
+    # Student Organizations Section
     st.write("\n")
     st.write("\n")
     st.title("Student Organizations")
@@ -160,61 +167,21 @@ elif st.session_state.menu == "Student Organizations":
     st.markdown("### FONIS *(2022 - Present)*")
     import streamlit as st
 
+    st.markdown("Projects I worked on:")
     # Section 1: Companies to Students (C2S)
-    st.markdown("**Companies to Students (C2S)**")
-    st.markdown("*Human Resources team member*")
-    st.markdown("> **What I did:**")
-    st.markdown("- `Organization and management of selection processes for project delegates`")
-    st.markdown("- `Conducting internal trainings and workshops for organization members`")
-    st.markdown("- `Monitoring member development and satisfaction through feedback sessions`")
-    st.markdown("- `Organizing team events and team-building activities`")
-    st.markdown("---")  # Separator
-
-    # Section 2: Students to Students (S2S) - Design Team
-    st.markdown("**Students to Students (S2S)**")
-    st.markdown("*Design team member*")
-    st.markdown("> **What I did:**")
-    st.markdown("- `Creation of visual identity for events and projects`")
-    st.markdown("- `Design of promotional materials (posters, brochures, social media content)`")
-    st.markdown("- `Work with tools like Adobe Photoshop, Illustrator and Figma`")
-    st.markdown("- `Collaboration with PR team on visual content`")
-    st.markdown("---")  # Separator
-
-    # Section 3: Hackathon for High School Students (HZS) - Logistics Team
-    st.markdown("**Hackathon for High School Students (HZS)**")
-    st.markdown("*Logistics team member*")
-    st.markdown("> **What I did:**")
-    st.markdown("- `Event organization (venue, technical equipment, logistical support)`")
-    st.markdown("- `Coordination with partners and sponsors regarding event needs`")
-    st.markdown("- `Budget management and material procurement for projects`")
-    st.markdown("- `Solving unexpected problems during events`")
-    st.markdown("---")  # Separator
-
-    # Section 4: Students to Students (S2S) - Corporate Relations Team
-    st.markdown("**Students to Students (S2S)**")
-    st.markdown("*Corporate Relations team member*")
-    st.markdown("> **What I did:**")
-    st.markdown("- `Communication with companies and potential sponsors`")
-    st.markdown("- `Writing and sending partnership and sponsorship proposals`")
-    st.markdown("- `Organization of guest lectures and workshops with companies`")
-    st.markdown("---")  # Separator
+    st.markdown("**Companies to Students (C2S)** - `Human Resources team member`")
+    st.markdown("**Students to Students (S2S)** - `Design team member`")
+    st.markdown("**Hackathon for High School Students (HZS)** - `Logistics team member`")
+    st.markdown("**Students to Students (S2S)** - `Corporate Relations team member`")
+    st.write("---")
     # Section Title
-    st.markdown("### Student Organization: Student Union – Faculty of Organizational Sciences (2023 – 2024)")
-
+    st.markdown("### Student Union Faculty of Organizational Sciences (2023 – 2024)")
+    st.markdown("Projects I worked on:")
     # Role and Projects
-    st.markdown("> **IT & Design Team Member**")
-    st.markdown("Projects worked on:")
-    st.markdown("- Practice Day")
-    st.markdown("- GreenWay")
-    st.markdown("- Sport Bizz")
-    st.markdown("- KSON")
-
-    # What I Did
-    st.markdown("> **What I did:**")
-    st.markdown("- `Created visual identities for various events and projects`")
-    st.markdown("- `Designed promotional materials (posters, brochures, and social media content)`")
-    st.markdown("- `Utilized tools like Adobe Photoshop, Illustrator, and Figma for design work`")
-    st.markdown("- `Collaborated with the PR team to develop visual content for campaigns`")
+    st.markdown("**Practice Day** - `IT & Design Team Member`")
+    st.markdown("**GreenWay** - `IT & Design Team Member`")
+    st.markdown("**Sport Bizz** - `IT & Design Team Member`")
+    st.markdown("**KSON** - `IT & Design Team Member`")
 
 
 # Skills Section

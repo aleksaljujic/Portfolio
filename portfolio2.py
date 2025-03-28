@@ -6,7 +6,7 @@ from pathlib import Path
 current_dir = Path(__file__).parent if "__file__" in locals() else Path()
 
 css_file = current_dir / "styles" / "style2.css"
-cv_file = current_dir / "assets" / "Aleksa Ljujic CV.pdf"
+cv_file = current_dir / "assets" / "Aleksa Ljujić CV.pdf"
 profile_image = current_dir / "assets" / "Aleksa Ljujic.png"
 
 
@@ -15,14 +15,14 @@ profile_image = current_dir / "assets" / "Aleksa Ljujic.png"
 with open(css_file) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 with open(cv_file, "rb") as pdf_file:
-    PDFbytes = pdf_file.read()
+    PDFbyte = pdf_file.read()
 profile_image = Image.open(profile_image)
 
 
-def download_cv(label):
+def download_cv():
     st.download_button(
-        label=label,
-        data=PDFbytes,
+        label="Download CV",
+        data=PDFbyte,
         file_name=cv_file.name,
         mime="application/octet-stream",
     )
@@ -70,38 +70,37 @@ with col2:
 
 with col3:
     st.title("Aleksa Ljujic")
-    st.subheader("*Student*")
+    st.subheader("*Data Scientist*")
     st.write("- [Email](mailto:aleksa.ljujic2@gmail.com)")
     st.write("- [LinkedIn](https://www.linkedin.com/in/aleksaljujic)")
     st.write("- [GitHub](https://github.com/aleksaljujic)")
-    st.write("- [Aleksa GPT](https://aleksa-gpt.streamlit.app)")
-    
-st.write("---")
-
-menu_options = {
-    "About": "https://aleksaportfolioo.streamlit.app/~/+/#about-me",
-    "Experience": "https://aleksaportfolioo.streamlit.app/~/+/#experience",
-    "Projects": "https://aleksaportfolioo.streamlit.app/~/+/#relevant-projects",
-    "Organizations": "https://aleksaportfolioo.streamlit.app/~/+/#student-organizations",
-    "Skills": "https://aleksaportfolioo.streamlit.app/~/+/#skills"
-}
 
 
-cols = st.columns(len(menu_options))
+# menu_options = {
+#     "About": "https://aleksaportfolioo.streamlit.app/~/+/#about-me",
+#     "Experience": "https://aleksaportfolioo.streamlit.app/~/+/#experience",
+#     "Projects": "https://aleksaportfolioo.streamlit.app/~/+/#relevant-projects",
+#     "Organizations": "https://aleksaportfolioo.streamlit.app/~/+/#student-organizations",
+#     "Skills": "https://aleksaportfolioo.streamlit.app/~/+/#skills"
+# }
 
-for i, (desc, link) in enumerate(menu_options.items()):
-    with cols[i]:
-        st.markdown(f"[{desc}]({link})", unsafe_allow_html=True)
-# Navigation menu using a selectbox
+
+
+# cols = st.columns(len(menu_options))
+
+# for i, (desc, link) in enumerate(menu_options.items()):
+#     with cols[i]:
+#         st.markdown(f"[{desc}]({link})", unsafe_allow_html=True)
+# # Navigation menu using a selectbox'
+
 
 
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Content for each menu section using session state
-st.write("\n")
-st.write("\n")
+#st.write("---")
 st.title("About Me")
-st.write("---")
+st.write("\n")
 st.info("""
     `I am a fourth-year student at the Faculty of Organizational Sciences, majoring
     in Information Systems and Technologies. With a deep passion for artificial
@@ -115,12 +114,10 @@ st.info("""
     push the boundaries of what these technologies can achieve.`
 """)
 
-download_cv("Download CV")
+download_cv()
 
-st.write("\n")
-st.write("\n")
-st.title("Experience")
 st.write("---")
+st.title("Experience")
 st.markdown("Integration Architect Internship")
 st.write("**Company**: [STADA GIS Serbia](https://www.stadagisserbia.com/sr)")
 st.write("**Duration**: February 2023 - August 2024")
@@ -130,9 +127,10 @@ st.markdown("- `Gained experience in Enterprise Architecture, design principles,
 st.markdown("- `Worked with LeanIX for data quality, Power BI for analytics, and SAP Integration Suite.`")
 st.markdown("- `Participated in projects like SAP Trading Partner Management and API Management.`")
 
-st.write("\n")
-st.write("\n")
+#Relevant Projects Section
+st.write("---")
 st.title("Relevant Projects")
+st.write("\n")
 projects = [
     {
         "name": "Intelligent Weather Prediction using Neural Networks",
@@ -149,7 +147,7 @@ projects = [
     {
         "name": "Aleksa GPT",
         "technologies": "`Python, Streamlit, OpenAI API`",
-        "github":"[link](link.com)",
+        "github":"[Aleksa GPT](https://aleksa-gpt.streamlit.app)",
         "description": "*Built a Streamlit application based on my CV to provide precise answers about my experience.*"
     },
     {
@@ -166,17 +164,16 @@ projects = [
     },
 ]
 for project in projects:
-    st.write("---")
+    st.write("\n")
     st.subheader(project["name"])
     st.write(f"**Technologies**: {project['technologies']}")
     st.write(project["description"])
     st.write(f"**See more on**: {project['github']}")
 
 # Student Organizations Section
-st.write("\n")
-st.write("\n")
-st.title("Student Organizations")
 st.markdown("---") 
+st.title("Student Organizations")
+st.write("\n")
 st.markdown("### FONIS *(2022 - Present)*")
 import streamlit as st
 
@@ -186,7 +183,7 @@ st.markdown("**Companies to Students (C2S)** - `Human Resources team member`")
 st.markdown("**Students to Students (S2S)** - `Design team member`")
 st.markdown("**Hackathon for High School Students (HZS)** - `Logistics team member`")
 st.markdown("**Students to Students (S2S)** - `Corporate Relations team member`")
-st.write("---")
+st.write("\n")
 # Section Title
 st.markdown("### Student Union Faculty of Organizational Sciences (2023 – 2024)")
 st.markdown("Projects I worked on:")
@@ -198,10 +195,10 @@ st.markdown("**KSON** - `IT & Design Team Member`")
 
 
 # Skills Section
-st.write("\n")
-st.write("\n")
-st.title("Skills")
+
 st.write("---")
+st.title("Skills")
+st.write("\n")
 st.write("- **Programming**: `Java, C#, Python, C, SQL`")
 st.write("- **Web Development**: `HTML, CSS, JavaScript`")
 st.write("- **Data Science & AI**: `PyTorch, Scikit-learn, Pandas, Tableau`")

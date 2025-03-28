@@ -20,13 +20,6 @@ a.em9zgd02{
     font-style: italic !important;
     text-decoration: none !important;
 }
-button{
-    color: #ff1493 !important;
-    width: 120px !important;
-    border: 0px !important;
-    font-size: 18px !important;
-    background-color: transparent !important;
-}
 button:hover{
     color:  #ff1493 !important;  
     border-color:  #ff1493 !important; 
@@ -58,5 +51,8 @@ h3{
 .st-emotion-cache-ocsh0s.em9zgd02{
     color:  #ff1493 !important;  
     border-color:  #ff1493 !important; 
+}
+*{
+    margin-top: 0px !important;
 }
 
