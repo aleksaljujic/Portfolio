@@ -79,11 +79,11 @@ with col3:
 st.write("---")
 
 menu_options = {
-    "About": "https://aleksaportfolioo.streamlit.app/#about-me",
-    "Experience": "https://aleksaportfolioo.streamlit.app/#experience",
-    "Projects": "https://aleksaportfolioo.streamlit.app/#relevant-projects",
-    "Organizations": "https://aleksaportfolioo.streamlit.app/#student-organizations",
-    "Skills": "https://aleksaportfolioo.streamlit.app/#skills"
+    "About": "https://aleksaportfolioo.streamlit.app/~/+/#about-me",
+    "Experience": "https://aleksaportfolioo.streamlit.app/~/+/#experience",
+    "Projects": "https://aleksaportfolioo.streamlit.app/~/+/#relevant-projects",
+    "Organizations": "https://aleksaportfolioo.streamlit.app/~/+/#student-organizations",
+    "Skills": "https://aleksaportfolioo.streamlit.app/~/+/#skills"
 }
 
 
