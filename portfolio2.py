@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit import config as _config
 from PIL import Image
 from pathlib import Path
+import os
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path()
 
@@ -17,6 +18,9 @@ with open(css_file) as f:
 with open(cv_file, "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 profile_image = Image.open(profile_image)
+
+if os.path.exists(cv_file):
+    os.chmod(cv_file, 0o777)  # Give full permissions
 
 
 def download_cv():
