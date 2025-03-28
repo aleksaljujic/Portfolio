@@ -44,6 +44,7 @@ with st.sidebar:
             "theme.base", 
             "dark" if st.session_state.dark_mode else "light"
         )
+        
         st.rerun()  # Force refresh to apply theme
     
     # Profile image
