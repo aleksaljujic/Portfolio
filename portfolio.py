@@ -211,7 +211,6 @@ elif st.session_state.menu == "Contact":
     st.write("---")
     st.write("`Feel free to reach out to me:`")
     st.write("\n")
-    st.write("- **Phone**: +381 60333 4933")
     st.write("- **Email**: [aleksa.ljujic2@gmail.com](mailto:aleksa.ljujic2@gmail.com)")
     st.write("- **LinkedIn**: [https://www.linkedin.com/in/aleksaljujic](https://www.linkedin.com/in/aleksaljujic)")
     st.write("- **GitHub**: [https://github.com/aleksaljujic](https://github.com/aleksaljujic)")
