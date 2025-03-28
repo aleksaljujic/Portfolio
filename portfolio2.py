@@ -182,19 +182,19 @@ import streamlit as st
 
 st.markdown("Projects I worked on:")
 # Section 1: Companies to Students (C2S)
-st.markdown("**Companies to Students (C2S)** - *Human Resources team member*")
-st.markdown("**Students to Students (S2S)** - *Design team member*")
-st.markdown("**Hackathon for High School Students (HZS)** - *Logistics team member*")
-st.markdown("**Students to Students (S2S)** - *Corporate Relations team member*")
+st.markdown("**Companies to Students (C2S)** - `Human Resources team member`")
+st.markdown("**Students to Students (S2S)** - `Design team member`")
+st.markdown("**Hackathon for High School Students (HZS)** - `Logistics team member`")
+st.markdown("**Students to Students (S2S)** - `Corporate Relations team member`")
 st.write("---")
 # Section Title
 st.markdown("### Student Union Faculty of Organizational Sciences (2023 – 2024)")
 st.markdown("Projects I worked on:")
 # Role and Projects
-st.markdown("**Practice Day** - *IT & Design Team Member*")
-st.markdown("**GreenWay** - *IT & Design Team Member*")
-st.markdown("**Sport Bizz** - *IT & Design Team Member*")
-st.markdown("**KSON** - *IT & Design Team Member*")
+st.markdown("**Practice Day** - `IT & Design Team Member`")
+st.markdown("**GreenWay** - `IT & Design Team Member`")
+st.markdown("**Sport Bizz** - `IT & Design Team Member`")
+st.markdown("**KSON** - `IT & Design Team Member`")
 
 
 # Skills Section
