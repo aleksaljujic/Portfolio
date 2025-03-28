@@ -72,12 +72,12 @@ if st.session_state.menu == "About":
     st.write("\n")
     st.title("About Me")
     st.write("---")
-    st.write("""
+    st.info("""
         `I am a fourth-year student at the Faculty of Organizational Sciences, majoring
         in Information Systems and Technologies. With a deep passion for artificial
         intelligence and machine learning, I am driven by their transformative
         potential to solve complex problems, uncover valuable insights, and shape the
-        future of technology.`  
+        future of technology.`
 
         `My goal is to become a highly skilled professional in AI and ML, leveraging
         innovative solutions to tackle real-world challenges and contribute meaningfully
@@ -90,16 +90,14 @@ elif st.session_state.menu == "Experience":
     st.write("\n")
     st.title("Experience")
     st.write("---")
-    st.subheader("Integration Architect Internship")
+    st.markdown("Integration Architect Internship")
     st.write("**Company**: [STADA GIS Serbia](https://www.stadagisserbia.com/sr)")
     st.write("**Duration**: February 2023 - August 2024")
     st.write(">*What I learned:*")
-    st.write("""
-            - `Acquired foundational knowledge of SAP environments and ERP systems.`
-            - `Gained experience in Enterprise Architecture, design principles, and planning.`
-            - `Worked with LeanIX for data quality, Power BI for analytics, and SAP Integration Suite.`
-            - `Participated in projects like SAP Trading Partner Management and API Management.`
-    """)
+    st.markdown("- `Acquired foundational knowledge of SAP environments and ERP systems.`")
+    st.markdown("- `Gained experience in Enterprise Architecture, design principles, and planning.`")
+    st.markdown("- `Worked with LeanIX for data quality, Power BI for analytics, and SAP Integration Suite.`")
+    st.markdown("- `Participated in projects like SAP Trading Partner Management and API Management.`")
 
 elif st.session_state.menu == "Relevant Projects":
     st.write("\n")
@@ -110,31 +108,31 @@ elif st.session_state.menu == "Relevant Projects":
             "name": "Intelligent Weather Prediction using Neural Networks",
             "technologies":"`PyTorch, Pandas, NumPy`",
             "github":"[link](link.com)",
-            "description": ">*Designed and implemented a neural network model to predict mean temperatures based on historical weather data.*"
+            "description": "*Designed and implemented a neural network model to predict mean temperatures based on historical weather data.*"
         },
         {
             "name": "Student Performance Predictor",
             "technologies": "`Jupyter Notebook, Pandas, NumPy, Scikit-learn`",
             "github":"[link](link.com)",
-            "description": ">*Developed a machine learning model to forecast student exam outcomes using predictive analytics.*"
+            "description": "*Developed a machine learning model to forecast student exam outcomes using predictive analytics.*"
         },
         {
             "name": "Aleksa GPT",
             "technologies": "`Python, Streamlit, OpenAI API`",
             "github":"[link](link.com)",
-            "description": ">*Built a Streamlit application based on my CV to provide precise answers about my experience.*"
+            "description": "*Built a Streamlit application based on my CV to provide precise answers about my experience.*"
         },
         {
             "name": "Pharmacy Billing System",
             "technologies": "`.NET, SQL Management Studio`",
             "github":"[link](link.com)",
-            "description": ">*Created a local server-client application to streamline pharmacy billing.*"
+            "description": "*Created a local server-client application to streamline pharmacy billing.*"
         },
         {
             "name": "Multiplayer Air Hockey Game",
             "technologies": "`Unity, C#, Photon`",
             "github":"[link](link.com)",
-            "description": ">*Developed a real-time multiplayer air hockey game featuring smooth networking and responsive gameplay.*"
+            "description": "*Developed a real-time multiplayer air hockey game featuring smooth networking and responsive gameplay.*"
         },
     ]
     for project in projects:
@@ -150,11 +148,11 @@ elif st.session_state.menu == "Student Organizations":
     st.write("\n")
     st.title("Student Organizations")
     st.markdown("---") 
-    st.markdown("### FONIS (2022 - Present)")
+    st.markdown("### FONIS *(2022 - Present)*")
     import streamlit as st
 
     # Section 1: Companies to Students (C2S)
-    st.markdown("**Companies to Students (C2S) (2022 – 2023)**")
+    st.markdown("**Companies to Students (C2S)**")
     st.markdown("*Human Resources team member*")
     st.markdown("> **What I did:**")
     st.markdown("- `Organization and management of selection processes for project delegates`")
@@ -164,7 +162,7 @@ elif st.session_state.menu == "Student Organizations":
     st.markdown("---")  # Separator
 
     # Section 2: Students to Students (S2S) - Design Team
-    st.markdown("**Students to Students (S2S) (2022 – 2023)**")
+    st.markdown("**Students to Students (S2S)**")
     st.markdown("*Design team member*")
     st.markdown("> **What I did:**")
     st.markdown("- `Creation of visual identity for events and projects`")
@@ -174,7 +172,7 @@ elif st.session_state.menu == "Student Organizations":
     st.markdown("---")  # Separator
 
     # Section 3: Hackathon for High School Students (HZS) - Logistics Team
-    st.markdown("**Hackathon for High School Students (HZS) (2022 – 2023)**")
+    st.markdown("**Hackathon for High School Students (HZS)**")
     st.markdown("*Logistics team member*")
     st.markdown("> **What I did:**")
     st.markdown("- `Event organization (venue, technical equipment, logistical support)`")
@@ -184,7 +182,7 @@ elif st.session_state.menu == "Student Organizations":
     st.markdown("---")  # Separator
 
     # Section 4: Students to Students (S2S) - Corporate Relations Team
-    st.markdown("**Students to Students (S2S) (2022 – 2023)**")
+    st.markdown("**Students to Students (S2S)**")
     st.markdown("*Corporate Relations team member*")
     st.markdown("> **What I did:**")
     st.markdown("- `Communication with companies and potential sponsors`")
@@ -197,10 +195,10 @@ elif st.session_state.menu == "Student Organizations":
     # Role and Projects
     st.markdown("> **IT & Design Team Member**")
     st.markdown("Projects worked on:")
-    st.markdown("-Practice Day")
-    st.markdown("-GreenWay")
-    st.markdown("-Sport Bizz")
-    st.markdown("-KSON")
+    st.markdown("- Practice Day")
+    st.markdown("- GreenWay")
+    st.markdown("- Sport Bizz")
+    st.markdown("- KSON")
 
     # What I Did
     st.markdown("> **What I did:**")

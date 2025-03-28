@@ -1,8 +1,11 @@
 .st-emotion-cache-hk58ed.e1xss9yb0 {
     color: #ff1493 !important; 
 }
+.st-emotion-cache-19n5hxt.e1xss9yb0{
+    color: #ff1493 !important; 
+}
 a{
-    color: green !important;
+    color: #ff1493 !important;
     font-style: italic !important;
     text-decoration: none !important;
 }
@@ -18,17 +21,17 @@ a.em9zgd02{
     text-decoration: none !important;
 }
 .st-emotion-cache-m2qe7r.em9zgd02:hover {
-    color: green !important;  
-    border-color: green !important;  
+    color:  #ff1493 !important;  
+    border-color:  #ff1493 !important; 
 }
 .st-emotion-cache-m2qe7r.em9zgd02:active{
-    background-color: green !important;
-    color: green !important;  
-    border-color: green !important;; 
+    background-color: #ff1493 !important;
+    color:  #ff1493 !important;  
+    border-color:  #ff1493 !important;
 }
 .st-emotion-cache-m2qe7r.em9zgd02:focus{
-    color: green !important;  
-    border-color: green !important; 
+    color:  #ff1493 !important;  
+    border-color:  #ff1493 !important; 
 }
 
 .st-emotion-cache-qsto9u.em9zgd02:hover{
@@ -51,6 +54,8 @@ h1{
 h3{
     font-size: 24px !important;
 }
-.st-am.st-bu.st-ao.st-ap.st-aq.st-ar.st-af.st-as.st-at.st-aj.st-au.st-av.st-aw.st-ax.st-ay.st-az.st-b0{
-    background: green !important;
+.st-am.st-cf.st-ao.st-ap.st-aq.st-ar.st-af.st-as.st-at.st-aj.st-au.st-av.st-aw.st-ax.st-ay.st-az.st-b0{
+    background:  #ff1493 !important;
 }
+
+
