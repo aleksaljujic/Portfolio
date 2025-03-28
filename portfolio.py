@@ -9,12 +9,23 @@ css_file = current_dir / "styles" / "style.css"
 cv_file = current_dir / "assets" / "Aleksa Ljujic CV.pdf"
 profile_image = current_dir / "assets" / "Aleksa Ljujic.png"
 
+
+
 # Load CSS
 with open(css_file) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 with open(cv_file, "rb") as pdf_file:
     PDFbytes = pdf_file.read()
 profile_image = Image.open(profile_image)
+
+
+def download_cv(label):
+    st.download_button(
+        label=label,
+        data=PDFbytes,
+        file_name=cv_file.name,
+        mime="application/octet-stream",
+    )
 
 # Initialize session states
 if 'menu' not in st.session_state:
@@ -84,6 +95,8 @@ if st.session_state.menu == "About":
         to technological advancement. I am eager to collaborate, learn, and continuously
         push the boundaries of what these technologies can achieve.`
     """)
+
+    download_cv("Download CV")
 
 elif st.session_state.menu == "Experience":
     st.write("\n")
