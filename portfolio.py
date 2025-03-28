@@ -7,9 +7,9 @@ import os
 current_dir = Path(__file__).parent if "__file__" in locals() else Path()
 
 
-css_file = current_dir / "styles" / "style.css"
-cv_file = current_dir / "assets" / "Aleksa Ljujić CV.pdf"
-profile_image = current_dir / "assets" / "Aleksa Ljujic.png"
+css_file = current_dir / "portfolio1"/ "styles" / "style.css"
+cv_file = current_dir / "portfolio1"/ "assets" / "Aleksa Ljujić CV.pdf"
+profile_image = current_dir / "portfolio1"/ "assets" / "Aleksa Ljujic.png"
 
 
 
