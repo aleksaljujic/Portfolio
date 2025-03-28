@@ -61,19 +61,15 @@ with st.sidebar:
     # Profile image
     st.image(profile_image, width=200)
     
-    # Navigation menu
-    menu_options = {
-        "About": "About",
-        "Experience": "Experience",
-        "Relevant Projects": "Relevant Projects",
-        "Student Organizations": "Student Organizations",
-        "Skills": "Skills",
-        "Contact": "Contact"
-    }
-    
-    for option, section in menu_options.items():
-        if st.button(option, key=section, use_container_width=True):
-            st.session_state.menu = section
+    # Navigation menu using a selectbox
+    menu_options = [
+        "About",
+        "Experience",
+        "Relevant Projects",
+        "Student Organizations",
+        "Skills",
+        "Contact"
+    ]
     
     st.markdown("<br>", unsafe_allow_html=True)
 
